@@ -6,14 +6,19 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
+import wisniowa.tc.Menu;
 
 public class GamePanel extends JPanel {
     public int x = 100;
     public int y = 300;
     private Team team;
     Player[] players;
+    public Boolean pause = false;
+    public Boolean started = false;
 
     public GamePanel(Team team) {
+        Menu menu = new Menu();
+        repaint();
         this.team = team;
         this.players = this.team.getTeamMembers();
         setFocusable(true);
@@ -58,21 +63,28 @@ public class GamePanel extends JPanel {
             }*/
 
             for (Player player: players) {
-                if (player.getGoLeftKey() == key) {
+                if (player.getGoLeftKey() == key && pause==false && started) {
                     player.tryGoLeft();
                     //player.setX(player.getX() - Constants.CHARACTER_IMG_WIDTH);
                 }
-                if (player.getGoRightKey() == key) {
+                if (player.getGoRightKey() == key && pause==false && started) {
                     player.tryGoRight();
                     //player.setX(player.getX() + Constants.CHARACTER_IMG_WIDTH);
                 }
-                if (player.getGoUpKey() == key) {
+                if (player.getGoUpKey() == key && pause==false && started) {
                     player.tryGoUp();
                     //player.setY(player.getY() - Constants.CHARACTER_IMG_HEIGHT);
                 }
-                if (player.getGoDownKey() == key) {
+                if (player.getGoDownKey() == key && pause==false && started) {
                     player.tryGoDown();
                     //player.setY(player.getY() + Constants.CHARACTER_IMG_HEIGHT);
+                }
+                if (key==KeyEvent.VK_ESCAPE && started) {
+                    if(pause==true) {
+                        pause = false;
+                    } else {
+                        pause = true;
+                    }
                 }
             }
             repaint();
