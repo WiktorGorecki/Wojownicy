@@ -1,11 +1,11 @@
 package wisniowa.tc;
 
 import javax.swing.*;
+import wisniowa.tc.MainWindow;
+class Menu extends JFrame
+{
+    public Boolean MainMenu() {
 
-public class Menu extends JMenu {
-    JMenuBar menuBar = new JMenuBar();
-    JMenu menu = new JMenu("ASDASDASD");
-    public Boolean Menu() {
         repaint();
         return true;
     }

@@ -18,7 +18,7 @@ public class GamePanel extends JPanel {
 
     public GamePanel(Team team) {
         Menu menu = new Menu();
-        repaint();
+        started = menu.MainMenu();
         this.team = team;
         this.players = this.team.getTeamMembers();
         setFocusable(true);
