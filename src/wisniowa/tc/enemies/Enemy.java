@@ -9,4 +9,9 @@ public class Enemy {
     protected String type;
     protected int hp;
 
+    public Enemy(int x, int y, int hp) {
+        this.x = x;
+        this.y = y;
+        this.hp = hp;
+    }
 }
