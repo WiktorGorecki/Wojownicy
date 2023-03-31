@@ -20,6 +20,7 @@ public class Player {
     int goDownKey;
     int attackLeftKey;
     int attackRightKey;
+    protected int hp;
 
     public Player(String name, int x, int y, int goLeftKey, int goRightKey, int goUpKey, int goDownKey, int attackLeftKey, int attackRightKey) {
         this.name = name;
@@ -32,6 +33,7 @@ public class Player {
         this.attackLeftKey = attackLeftKey;
         this.attackRightKey = attackRightKey;
         occupatedPlaces[x][y] = true;
+        this.hp=100;
 
     }
 
