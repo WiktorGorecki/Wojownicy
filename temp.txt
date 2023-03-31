@@ -11,7 +11,7 @@
 
 3. koniec gry
 
--Osoba która przegrywa pojawia siê w losowym miejscu po kilku sekundach.
+-Osoba która przegrywa pojawia się w losowym miejscu po kilku sekundach.
 
 4. potwór
 
