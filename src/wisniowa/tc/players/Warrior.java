@@ -14,5 +14,6 @@ public class Warrior extends Player{
                         Constants.IMAGE_FOLDER +
                                 "warrior/1.png"
                 ).getImage();
+        hp=150;
     }
 }

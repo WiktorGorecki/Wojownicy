@@ -13,5 +13,6 @@ public class Archer extends Player {
                         Constants.IMAGE_FOLDER +
                                 "archer/1.png"
                 ).getImage();
+        hp=90;
     }
 }

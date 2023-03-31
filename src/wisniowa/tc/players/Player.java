@@ -33,7 +33,6 @@ public class Player {
         this.attackLeftKey = attackLeftKey;
         this.attackRightKey = attackRightKey;
         occupatedPlaces[x][y] = true;
-        this.hp=100;
 
     }
 
